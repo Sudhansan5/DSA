@@ -1,3 +1,3 @@
 # Solutions of DSA problems
 Topics covered:
-Sliding window
+1. Sliding window
