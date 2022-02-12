@@ -1,0 +1,17 @@
+public class MyClass {
+    static int temp;
+    static void reverse(int i,int j,int arr[]){
+        if(i>j)
+            return;
+        temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+        reverse(i+1,j-1,arr);
+    }
+    public static void main(String args[]) {
+      int arr[]={1,2,3,4,5};
+      reverse(0,4,arr);
+      for(int i:arr)
+        System.out.println(i);
+    }
+}
