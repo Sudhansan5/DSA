@@ -64,7 +64,6 @@ void reverse(){
        while(curr!=null){
            Node temp=curr.next;
            curr.next=prev;
-           curr.next=prev;
            prev=curr;
            curr=temp;
         }
