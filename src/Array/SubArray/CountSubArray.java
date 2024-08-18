@@ -1,7 +1,5 @@
 package Array.SubArray;
 
-import Array.PrefixSum.BuyAndSell;
-
 /*
 Given an array A of N non-negative numbers and a non-negative number B,
 you need to find the number of subarrays in A with a sum less than B.
