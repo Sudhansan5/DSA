@@ -1,5 +1,6 @@
 package Basics;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 
 public class Solution {
@@ -35,8 +36,10 @@ public class Solution {
         Solution solution = new Solution();
         int arr[] = {-87, -73,72,86,96};
         System.out.println(solution.maxp3(arr));
+        BigDecimal hour =BigDecimal.ZERO;
+        BigDecimal minute = BigDecimal.TEN;
+       //System.out.println(minute.divide(hour));
     }
-
 }
 
 
