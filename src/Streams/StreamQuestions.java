@@ -1,12 +1,34 @@
 package Streams;
 
+import java.math.MathContext;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamQuestions {
+  class Employee{
+    String name;
+    String department;
+    int salary;
+    Employee(String name, String department, int salary){
+      this.name = name;
+      this.department = department;
+      this.salary = salary;
+    }
+  }
+  List<Employee> getEmployeeList() {
+    Employee emp1 = new Employee("Sudhanshu", "ECE", 2400);
+    Employee emp2 = new Employee("Saket", "ECE", 3000);
+    Employee emp3 = new Employee("Niket", "CSE", 1500);
+    Employee emp4 = new Employee("Raju", "IT", 1000);
+    Employee emp5 = new Employee("Mukesh", "CSE", 1000);
+
+    return List.of(emp1, emp2, emp3, emp4, emp5);
+  }
+
   public static void main(String[] args) {
     List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     List<String> names = List.of("Tantia Tope", "Rani Lakshmibai", "Mangal Pandey", "Nana Sahib");
@@ -67,6 +89,24 @@ public class StreamQuestions {
     // 14.Remove null values from a list using streams
       List<String> val = Arrays.asList("abc","cde",null);
       List<String> nonNull = val.stream().filter(Objects::nonNull).collect(Collectors.toList());
-    System.out.println(nonNull);
+//    System.out.println(nonNull);
+
+    // 15. Problem Statement: GROUP BY Department and Find Max Salary
+    // You have been tasked with analyzing a dataset of employee information to determine the
+    // maximum salary in each department. The dataset consists of a list of Employee objects, where
+    // each employee has a name, department, and salary. You need to group the employees by their
+    // respective departments and identify the maximum salary within each department.
+    StreamQuestions obj = new StreamQuestions();
+    List<Employee> empList = obj.getEmployeeList();
+
+    // 16. merge and sort two arrays
+    List<Integer> arr1 = Arrays.asList(2,3,1,10,9);
+    List<Integer> arr2 = Arrays.asList(4,5,6,1,0);
+//    Stream.concat(arr1.stream(), arr2.stream()).sorted().forEach(System.out::println);
+
+    // 17. Given a string, check if it is a palindrome.
+//    String name = "sudhanshu";
+
   }
+
 }
